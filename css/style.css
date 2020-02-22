@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+body {
+    font-family: 'Playfair Display', sans-serif;
+}
+
+p {
+    letter-spacing: 1.25px;
+}
+
+.btn,
+.nav-btn {
+    border-radius: 50px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+.nav-btn {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+}
+
+.mw-50p {
+    max-width: 50%;
+}
+
+.index-1 {
+    z-index: 1;
+}
+
+.banner--background {
+    background-image: url(../images/banner-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner--overlay {
+    background-image: linear-gradient(to top right, rgba(203, 0, 52, 0.88) , rgba(224, 105, 0, 0.88));
+}
+
+[class^="wrapper--"] {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.wrapper--features h4 {
+    background: -webkit-linear-gradient(rgb(203, 0, 52), rgb(224, 105, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.wrapper--features p {
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.wrapper--more-features {
+    position: relative;
+    overflow: hidden;
+}
+.wrapper--more-features img {
+    position: absolute;
+    right: -45%;
+    height: auto;
+    top: -15%;
+    z-index: 0;
+}
+
+.no-wrapper h2 {
+    background: -webkit-linear-gradient(rgb(203, 0, 52), rgb(224, 105, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.wrapper--newsletter {
+    background-image: url(../images/newsletter-background-overlay.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper--newsletter .input-group .form-control {
+    background-color: transparent;
+    border-radius: 50px 0 0 50px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.wrapper--newsletter .input-group .btn {
+    border-radius: 50px;
+    margin-left: -1rem;
+}
+
+.wrapper--newsletter .input-group .form-control::-webkit-input-placeholder { /* Edge */
+    color: #fff;
+}
+.wrapper--newsletter .input-group .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+}
+.wrapper--newsletter .input-group .form-control::placeholder {
+    color: #fff;
+}
