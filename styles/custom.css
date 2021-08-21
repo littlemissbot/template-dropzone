@@ -1,6 +1,8 @@
+/* IMPORT GOOGLE FONT FILES */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap');
 
+/* TODO: Customize below CSS variables to match brand styles */
 :root {
   /* 5 Shades of Color */
   --primary-darker: #153100;
