@@ -9,17 +9,13 @@
   <title>Tulip Retreats | Responsive HTML Template</title>
 
   <!-- TODO: Add Meta Tags -->
-  <!-- <meta name="author" content="Samita Mondal">
-    <meta name="description" content="Template created by Samita Monda, CEO & Founder at Redmonk Studios">
-    <meta name="keywords" content="samita, littlemissbot, samita mondal, samitalinx, connect2samita, redmonk, redmonk studios, web developer, freelancer"> -->
+  <meta name="author" content="Samita Mondal">
+  <meta name="description" content="Template created by Samita Monda, CEO & Founder at Redmonk Studios">
+  <meta name="keywords" content="samita, littlemissbot, samita mondal, samitalinx, connect2samita, redmonk, redmonk studios, web developer, freelancer">
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.9.55/css/materialdesignicons.min.css"
-    integrity="sha512-vIgFb4o1CL8iMGoIF7cYiEVFrel13k/BkTGvs0hGfVnlbV6XjAA0M0oEHdWqGdAVRTDID3vIZPOHmKdrMAUChA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles/custom.css">
 
   <!-- TODO: Add Favicon -->
@@ -30,7 +26,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">tulip<strong>retreats</strong></a>
+        <a class="navbar-brand" href="index.html">tulip<strong>retreats</strong></a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
@@ -103,9 +99,9 @@
     </div>
   </section>
 
-  <div class="wrapper--gallery gallery-1 full-width">
+  <section class="wrapper--gallery gallery-1 full-width">
     <div class="gallery--overlay"></div>
-  </div>
+  </section>
 
   <section class="no-wrapper wrapper--testimonial">
     <div class="d-flex flex-wrap align-items-center">
@@ -221,33 +217,33 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="inputEmail">Email address</label>
-              <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-              <label for="inputMessage">Message</label>
-              <textarea id="inputMessage" cols="30" rows="10" class="form-control"></textarea>
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="inputTerms" checked>
-              <label class="form-check-label" for="inputTerms">I agree to the Terms of Use</label>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Send Message</button>
-        </div>
+        <form action="send-mail.php" method="POST">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="email_address" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="inputMessage">Message</label>
+                <textarea id="inputMessage" cols="30" rows="10" class="form-control" name="message" required></textarea>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="inputTerms" checked>
+                <label class="form-check-label" for="inputTerms">I agree to the Terms of Use</label>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -263,9 +259,14 @@
     </div>
   </div>
 
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.9.55/css/materialdesignicons.min.css"
+    integrity="sha512-vIgFb4o1CL8iMGoIF7cYiEVFrel13k/BkTGvs0hGfVnlbV6XjAA0M0oEHdWqGdAVRTDID3vIZPOHmKdrMAUChA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- JAVASCRIPT -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
   <script src="scripts/custom.js"></script>
