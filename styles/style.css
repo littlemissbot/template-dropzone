@@ -1,28 +1,51 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&family=Tapestry&display=swap');
 
 body {
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Tapestry', cursive;
+}
 p {
     letter-spacing: 1.25px;
 }
 
 .btn,
 .nav-btn {
+    font-size: 1em;
+    text-transform: uppercase;
     border-radius: 50px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
     letter-spacing: 1px;
 }
-
+.navbar {
+    border-radius: 50px;
+    padding: 1rem 3rem;
+}
+.navbar-brand {
+    font-family: 'Tapestry', cursive;
+}
 .nav-link {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
 }
 .nav-btn {
+    padding-top: 0.35rem !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0.35rem !important;
     margin-left: 0.5rem !important;
     margin-right: 0.5rem !important;
+}
+.dropdown-menu .dropdown-item {
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .mw-50p {
@@ -38,6 +61,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .banner--overlay {
@@ -48,6 +72,10 @@ p {
 [class^="wrapper--"] {
     padding-top: 6rem;
     padding-bottom: 6rem;
+}
+[class^="no-wrapper"] h2,
+.wrapper--more-features h2 {
+    margin-bottom: 2rem;
 }
 
 .wrapper--features h4 {
@@ -95,6 +123,8 @@ p {
 .wrapper--newsletter .input-group .btn {
     border-radius: 50px;
     margin-left: -1rem;
+    border-bottom-width: 0;
+    border-top-width: 0;
 }
 
 .wrapper--newsletter .input-group .form-control::-webkit-input-placeholder { /* Edge */
@@ -105,4 +135,23 @@ p {
 }
 .wrapper--newsletter .input-group .form-control::placeholder {
     color: #fff;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 915px) {
+    .banner--overlay {
+        padding: 10px;
+    }
+    .banner--overlay p.px-5.mx-5.mt-2 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .wrapper--more-features img {
+        opacity: 0.5;
+    }
 }
