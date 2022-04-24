@@ -282,6 +282,13 @@ h1.display-4 {
   min-height: 50vh;
   background-image: url(../images/gallery-1.jpg);
   background-position: center 70%;
+  padding: 0 10%;
+
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .gallery--overlay {
   position: absolute;
@@ -290,7 +297,12 @@ h1.display-4 {
   right: 0;
   bottom: 0;
   background: var(--primary);
-  opacity: 0.25;
+  opacity: 0.5;
+  z-index: 0;
+}
+.gallery--overlay ~ h2,
+.gallery--overlay ~ p {
+  z-index: 1;
 }
 
 /* NEWSLETTER */
